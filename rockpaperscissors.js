@@ -5,6 +5,7 @@ let count_computer_wins = 0;
 
 play_rps.addEventListener("click", function(){
   let player_name_rps= document.getElementById("name_rps").value;
+  document.getElementById("greeting").innerHTML = "Hello " + player_name_rps +", let's play!";
   let player_choice_rps = getUserChoice(document.getElementById("choice_rps").value);
   if(player_choice_rps==="Invalid input"){
     document.getElementById("choice_rps").innerHTML = player_choice_rps;
