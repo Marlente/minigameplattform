@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MiniGamePlattform</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+
+    <body class="font-nunito bg-slate-100">
+        <header class="border-b-2">
+            <img class="object-cover h-40" src="/Webpage/assets/signature_logo.png" alt="Brand Logo">
+            <nav class="font-semibold text-gray-700">                       
+                <ul class="justify-around items-center pt-1 font-bold sm:grid sm:grid-cols-3 text-center">
+                    <li class="px-20"><a href="projectgallery.html">Project Gallery</a></li>
+                    <li class="px-20 h-full align-middle"><a href="blog.html">Blog</a></li>
+                    <li class="bg-blue-200 px-20"><a href="aboutme.html">About Me</a></li>
+                </ul>
+            </nav>    
+        </header>
+
+        <main class="">
+            <h3 class="text-3xl font-semibold text-gray-900 mt-8">Comment Box</h3>
+            <div class="mt-4 bg-slate-100">
+                <input id="comment-box-name" type="text" placeholder="Enter name" class="border-2 px-3 py-2 mt-2">
+                <input id="comment-box-email" type="text" placeholder="Enter email" class="border-2 px-3 py-2 mt-2">
+                <input id="comment-box-comment" type="text" placeholder="Enter comment" class="border-2 px-3 mt-2 py-2">
+                <div class="flex mt-2">
+                    <p id="lengthcount" type="text" class="px-3 py-2 italic text-s mt-2 items-center w-min">0/140</p>
+                    <button id="post" class="bg-blue-500 text-white ml-6 px-3 py-0 rounded-lg font-semibold">Post</button> 
+                </div>
+                
+                <ul id="unordered">
+                    
+                </ul>
+                
+                <script src="commentbox.js">
+                </script>
+            </div>
+        </main>
+
+        <footer class="bg-blue-200 mt-6 sm:flex justify-between">
+            <div class="m-4 flex py-4 items-center">
+                <a href="https://www.linkedin.com/in/marlo-k%C3%BCrner-1a5694175/"><img class="h-12 ml-2 min-w-min md:ml-0" src="/Webpage/assets/linkedin_logo.png" alt="Link to personal Linkedin Profile"></a>
+                <a href="https://www.instagram.com/accounts/login/?next=/marlokuerner/"><img class="ml-2 min-w-min h-12" src="/Webpage/assets/insta_logo_black.png" alt="Link to personal Instagram Profile"></a>
+                <a href="https://github.com/Marlente"><img class="ml-2 h-12 min-w-min" src="/Webpage/assets/Github_logo.png" alt="Link to personal Github profile"></a>
+                <a href="mailto:marlo-k@gmx.de"><img class="h-12 ml-2 min-w-min" src="/Webpage/assets/email_logo.png" alt="Mail to personal mail address"></a>
+            </div>
+            <div class="m-4 border-r-2 border-gray-600">
+            </div>
+            <div class="m-4 justify-center">
+                <div><a href="/Webpage/projectgallery.html">Project Gallery</a></div>
+                <div><a href="/Webpage/blog.html">Blog</a></div>
+                <div><a href="/Webpage/aboutme.html">About Me</a></div> 
+            </div>
+            <div class="m-4 border-r-2 border-gray-600">
+            </div>
+            <div class="items-end flex">
+                <p class="text-xs m-4">Marlo Kürner © 2022</p>                
+            </div>
+
+        </footer>
+
+    </body>
+</html>
