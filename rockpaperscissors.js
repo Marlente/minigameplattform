@@ -1,26 +1,24 @@
-let userChoice= document.getElementById("post");
-post.addEventListener("click", function(){
-    var commentBoxValue= document.getElementById("comment-box-name").value + ", " + document.getElementById("comment-box-email").value + ":";
- 
-    var li1 = document.createElement("li");
-    var text1 = document.createTextNode(commentBoxValue);
-    li1.appendChild(text1);
-    document.getElementById("unordered").appendChild(li1);
-
-    var commentBoxComment= document.getElementById("comment-box-comment").value;
- 
-    var li2 = document.createElement("li");
-    var text2 = document.createTextNode(commentBoxComment);
-    li2.appendChild(text2);
-    document.getElementById("unordered").appendChild(li2);
- 
+let rps = document.getElementById("play_rps");
+rps.addEventListener("click", function(){
+    let playername= document.getElementById("name_rps").value;
+    let player_choice_rps = getUserChoice(document.getElementById("choice_rps"));
+    if(player_choice_rps==="Invalid input"){
+      document.getElementById("choice_rps").innerHTML = player_choice_rps;
+    }
+    else{
+      let computer_choice_rps = getComputerChoice();
+      let result_rps = determineWinner(player_choice_rps, computer_choice_rps);
+      let display_result = document.createElement("li");
+      display_result.appendChild(result_rps);
+      document.getElementById("result_rps").appendChild(display_result);
+    }
 });
 
 
 const getUserChoice = function (userInput){
   userInput = userInput.toLowerCase();
   if(userInput === "rock" || userInput === "paper" || userInput === "scissors" ){return userInput}
-  else {console.log("Invalid input")}
+  else {return "Invalid input"}
 }
 
 function getComputerChoice(){
