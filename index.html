@@ -12,7 +12,7 @@
             <img class="object-cover h-40 pt-2" src="/assets/minigames.png" alt="Games Icon">
             <nav class="font-semibold text-gray-700">                       
                 <ul class="justify-around items-center pt-1 font-bold sm:grid sm:grid-cols-3 text-center">
-                    <li class="px-20"><a href="">Tic Tac Toe</a></li>
+                    <li class="px-20"><a href="">Number Guesser</a></li>
                     <li class="px-20 h-full align-middle"><a href="">Magic Conch Shell</a></li>
                     <li class="bg-blue-200 px-20"><a href="">Rock, Paper, Scissors</a></li>
                 </ul>
@@ -21,7 +21,7 @@
 
         <main class="px-6 pt-4 grid place-items-center">
             <!-- ROCK PAPER SCISSORS further as RPS   -->
-            <div id="rockpaperscissors" class="w-full h-full place-items-center grid bg-center bg-cover bg-no-repeat place-items-center" style="background-image: url(/assets/rps_background.png)">
+            <div id="rockpaperscissors" class="w-full min-h-screen place-items-center grid bg-center bg-contain bg-no-repeat place-items-center" style="background-image: url(/assets/rps_background.png)">
                 <h3 class="text-3xl font-semibold text-gray-900 mt-8">Rock, Paper, or Scissors</h3>
                 <div class="mt-4">
                     <input id="name_rps" type="text" placeholder="Enter name (optional)" class="border-2 px-3 py-2 mt-2">
@@ -54,7 +54,7 @@
             </div>
 
             <!-- Magic Conch Shell further as MCS  -->
-            <div id="magicconchshell" class="w-full h-full place-items-center grid bg-center bg-cover bg-no-repeat place-items-center" style="background-image: url(/assets/conchshell_background.png)">
+            <div id="magicconchshell" class="w-full min-h-screen place-items-center grid bg-center bg-contain bg-no-repeat place-items-center" style="background-image: url(/assets/conchshell_background.png)">
                 <h3 class="text-3xl font-semibold text-gray-900 mt-8">The Magic Conch Shell</h3>
                 <div class="mt-4">
                     <input id="name_mcs" type="text" placeholder="Enter name (optional)" class="border-2 px-3 py-2 mt-2">
@@ -83,6 +83,47 @@
                 </div>
             </div>
 
+            <!-- NUMBER GUESSER further as NG-->
+            <div id="numberguesser" class="w-full min-h-screen place-items-center grid bg-center bg-contain bg-no-repeat place-items-center" style="background-image: url(/assets/numberguesser_background.png)">
+                <h3 class="text-3xl font-semibold text-gray-900 mt-8">Number Guesser</h3>
+
+                <div class="flex">
+                    <p>Round</p>
+                    <p id="round_number_ng"></p>
+                </div>
+                <div class="flex">
+                    <p>Target Number</p>
+                    <p id="target_number_ng"></p>
+                </div>
+
+                <div class="grid grid-cols-2">
+                    <div>
+                        <h2>Computer</h2>
+                        <div class="flex">
+                            <p>Score:</p>
+                            <p id="computer_score_ng"></p>
+                        </div> 
+                        <p id="computer_guess"></p>
+                    </div>
+                    <div>
+                        <h2>You</h2>
+                        <div class="flex">
+                            <p>Score:</p>
+                            <p id="player_score_ng"></p>
+                        </div>    
+                        <div>
+                            <input type="number" id="player_guess_ng" placeholder="?">
+                        </div>
+                        <button id="submit_guess">Make Your Guess!</button>
+                    </div>
+                </div>
+                <h1 id="winner_ng"></h1>
+                <div>
+                    <button id="next_round_ng">Next Round</button>
+                </div>
+
+                <script src="/numberguesser.js"></script>
+            </div>
 
         </main>
         <!-- 
