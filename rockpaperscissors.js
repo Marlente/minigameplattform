@@ -1,7 +1,8 @@
 let rps = document.getElementById("play_rps");
 rps.addEventListener("click", function(){
+    playGame();
     let playername= document.getElementById("name_rps").value;
-    let player_choice_rps = getUserChoice(document.getElementById("choice_rps"));
+    let player_choice_rps = getUserChoice(document.getElementById("choice_rps").value);
     if(player_choice_rps==="Invalid input"){
       document.getElementById("choice_rps").innerHTML = player_choice_rps;
     }
