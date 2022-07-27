@@ -1,27 +1,39 @@
-let userName = "";
 
-const getUserName = function (name){
-  userName=name;
-}
+let ask_mcs = document.getElementById("ask_mcs");
+let count_questions = 0;
 
-const greetUser = function(){
-  userName ? console.log("Hello, "+userName+"!"):console.log("Hello!");
-}
+ask_mcs.addEventListener("click", function(){
+  let question = document.getElementById("question_to_mcs").value;
+  console.log(question)
+  if (question===""){
+    document.getElementById("empty_question").innerHTML="Please insert a Question first.";
+  }
+  else {
+    let question_log = document.createElement("li");
+    question_log.appendChild(document.createTextNode(question));
+    document.getElementById("question_log").appendChild(question_log);
+    let answer_log = document.createElement("li");
+    answer_log.appendChild(document.createTextNode(askTheShell()));
+    document.getElementById("answer_log").appendChild(answer_log);
+    count_questions += 1;
+  }
+
+});
 
 
-let userQuestion = "Will I get my tattoo?";
 
-console.log(userQuestion);
-let randomNumber = Math.floor(Math.random()*8);
-let eightBall = "";
-switch (randomNumber){
-  case 1: console.log('It is certain');break;
-  case 2: console.log('It is decidedly so');break;
-  case 3: console.log('Reply hazy try again');break;
-  case 4: console.log('Cannot predict now');break;
-  case 5: console.log('Do not count on it');break;
-  case 6: console.log('My sources say no');break;
-  case 7: console.log('Outlook not so good');break;
-  case 8: console.log('Signs point to yes');break;
-  default: console.log("You will never no");break;
+
+const askTheShell = ()=>{
+  let randomNumber = Math.floor(Math.random()*8);
+  switch (randomNumber){
+    case 1: return 'It is certain';   
+    case 2: return 'It is decidedly so';    
+    case 3: return 'Reply hazy try again';    
+    case 4: return 'Cannot predict now';    
+    case 5: return 'Do not count on it';    
+    case 6: return 'My sources say no';    
+    case 7: return 'Outlook not so good';    
+    case 8: return 'Signs point to yes';    
+    default: return "You will never no";  
+  }
 }

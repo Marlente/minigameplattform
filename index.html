@@ -21,8 +21,8 @@
 
         <main class="px-6 pt-4 grid place-items-center">
             <!-- ROCK PAPER SCISSORS further as RPS   -->
-            <div class="w-full h-full place-items-center grid bg-center-cover bg-no-repeat place-items-center" style="background-image: url(/assets/rps_background.png)">
-                <h3 class="text-3xl font-semibold text-gray-900 mt-8 justify-center w-full">Rock, Paper, or Scissors</h3>
+            <div id="rockpaperscissors" class="w-full h-full place-items-center grid bg-center bg-cover bg-no-repeat place-items-center" style="background-image: url(/assets/rps_background.png)">
+                <h3 class="text-3xl font-semibold text-gray-900 mt-8">Rock, Paper, or Scissors</h3>
                 <div class="mt-4">
                     <input id="name_rps" type="text" placeholder="Enter name (optional)" class="border-2 px-3 py-2 mt-2">
                     <input id="choice_rps" type="text" placeholder="Rock, Paper or Scissors?" class="border-2 px-3 mt-2 py-2 w-min">
@@ -52,6 +52,38 @@
                     </script>
                 </div>
             </div>
+
+            <!-- Magic Conch Shell further as MCS  -->
+            <div id="magicconchshell" class="w-full h-full place-items-center grid bg-center bg-cover bg-no-repeat place-items-center" style="background-image: url(/assets/conchshell_background.png)">
+                <h3 class="text-3xl font-semibold text-gray-900 mt-8">The Magic Conch Shell</h3>
+                <div class="mt-4">
+                    <input id="name_mcs" type="text" placeholder="Enter name (optional)" class="border-2 px-3 py-2 mt-2">
+                    <input id="question_to_mcs" type="text" placeholder="What is your Question?" class="border-2 px-3 mt-2 py-2 w-min">
+                    <div class="flex mt-2">
+                        <button id="ask_mcs" class="bg-blue-500 text-white ml-6 px-3 py-0 rounded-lg font-semibold">Ask the all-knowing shell!</button> 
+                        <p id="empty_question"></p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2">
+                        <div>
+                            <h2>Questions:</h2>
+                            <ul id="question_log">
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>What the Shell thinks:</h2>
+                            <ul id="answer_log"> 
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                    <script src="magicconchshell.js">
+                    </script>
+                </div>
+            </div>
+
+
         </main>
         <!-- 
         <footer class="bg-blue-200 mt-6 sm:flex justify-between">
