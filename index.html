@@ -12,11 +12,12 @@
             <img class="object-cover h-40 pt-2" src="/assets/minigames.png" alt="Games Icon">
             <nav class="font-semibold text-gray-700">                       
                 <ul class="justify-around items-center pt-1 font-bold sm:grid sm:grid-cols-3 text-center">
-                    <li class="px-20"><a href="">Number Guesser</a></li>
-                    <li class="px-20 h-full align-middle"><a href="">Magic Conch Shell</a></li>
-                    <li class="bg-blue-200 px-20"><a href="">Rock, Paper, Scissors</a></li>
+                    <li id="select_ng" class="px-20">Number Guesser</li>
+                    <li id="select_mcs" class="px-20 h-full align-middle">Magic Conch Shell</li>
+                    <li id="select_rps" class="bg-blue-200 px-20">Rock, Paper, Scissors</li>
                 </ul>
-            </nav>    
+            </nav>  
+            <script src="/hideandtoggle.js"></script>  
         </header>
 
         <main class="px-6 pt-4 grid place-items-center">
@@ -88,8 +89,8 @@
                 <h3 class="text-3xl font-semibold text-gray-900 mt-8">Number Guesser</h3>
 
                 <div class="flex">
-                    <p>Round</p>
-                    <p id="round_number_ng"></p>
+                    <p>Round </p>
+                    <p id="round_number_ng">0</p>
                 </div>
                 <div class="flex">
                     <p>Target Number</p>
