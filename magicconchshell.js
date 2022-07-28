@@ -9,6 +9,7 @@ ask_mcs.addEventListener("click", function(){
     document.getElementById("empty_question").innerHTML="Please insert a Question first.";
   }
   else {
+    document.getElementById("empty_question").innerHTML="";
     let question_log = document.createElement("li");
     question_log.appendChild(document.createTextNode(question));
     document.getElementById("question_log").appendChild(question_log);

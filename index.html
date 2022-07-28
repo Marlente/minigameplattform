@@ -22,7 +22,7 @@
             </nav> 
         </header>
 
-        <main class="px-6 pt-4 grid place-items-center">
+        <main class="pt-4 grid place-items-center">
             <!-- DEFAULT WHERE NO GAME IS SELECTED -->  
             <div id="default" class="flex items-center pt-12">
                 <h1 class="font-bold font-4xl">Select a game first</h1>
@@ -31,7 +31,7 @@
 
             <!-- ROCK PAPER SCISSORS further as RPS   -->
             <div id="rockpaperscissors" class="w-full min-h-1/2">
-                <div class="w-full min-h-screen grid place-items-center items-start bg-center bg-contain bg-no-repeat" style="background-image: url(/assets/rps_background.png)">
+                <div class="w-full min-h-1/2 grid place-items-center items-start">
                     <h3 class="h-fit border-2 w-full text-3xl font-semibold text-gray-900 mt-8 text-center">Rock, Paper, or Scissors</h3>
                     <div class="grid items-start place-items-center">
                         <div>
@@ -41,16 +41,16 @@
                         </div>
                         <p id="greeting" type="text" class="font-semibold px-3 py-2"></p>
                         
-                        <div class="grid grid-cols-2 place-items-center items-start w-full border-gray-600 rounded-lg border-2">
-                            <div>
-                                <h2 class="font-xl font-semibold">Game Log:</h2>
+                        <div class="grid grid-cols-2 place-items-center items-start w-screen bg-center bg-contain bg-no-repeat" style="background-image: url(/assets/rps_background.png)">
+                            <div class="font-xl">
+                                <h2 class="font-semibold">Game Log</h2>
                                 <ul id="result_rps">
                                     
                                 </ul>
                             </div>
 
-                            <div class="font-xl font-semibold" id="count_rps">
-                                <h2>Scoreboard</h2>
+                            <div class="font-xl" id="count_rps">
+                                <h2 class="font-semibold">Scoreboard</h2>
                                 
                                 Games:<p id="games_rps">0</p>
                                 Wins:<p id="player_wins_rps">0</p>
@@ -66,35 +66,37 @@
             </div>
 
             <!-- Magic Conch Shell further as MCS  -->
-            <div id="magicconchshell" class="w-full h-3/4">
-                <div class="w-full h-full place-items-center grid bg-center bg-contain bg-no-repeat place-items-center" style="background-image: url(/assets/conchshell_background.png)">
-                    <h3 class="text-3xl font-semibold text-gray-900 mt-8">The Magic Conch Shell</h3>
-                    <div class="mt-4">
-                        <input id="name_mcs" type="text" placeholder="Enter name (optional)" class="border-2 px-3 py-2 mt-2">
-                        <input id="question_to_mcs" type="text" placeholder="What is your Question?" class="border-2 px-3 mt-2 py-2 w-min">
-                        <div class="flex mt-2">
-                            <button id="ask_mcs" class="bg-blue-500 text-white ml-6 px-3 py-0 rounded-lg font-semibold">Ask the all-knowing shell!</button> 
-                            <p id="empty_question"></p>
-                        </div>
+            <div id="magicconchshell" class="w-full min-h-screen">
+                <div class="w-full min-h-3/4 place-items-center items-start grid">
+                    <h3 class="h-fit border-2 w-full text-3xl font-semibold text-gray-900 mt-8 text-center">The Magic Conch Shell</h3>
+                    <div class="grid grid-cols-2">
+                        <div class="w-96 h-96 place-items-center items-start grid bg-center bg-contain bg-no-repeat" style="background-image: url(/assets/conchshell_background.png)"></div>
                         
-                        <div class="grid grid-cols-2">
-                            <div>
-                                <h2>Questions:</h2>
-                                <ul id="question_log">
-                                </ul>
+                        <div class="mt-4">
+                            <input id="name_mcs" type="text" placeholder="Enter name (optional)" class="border-2 px-3 py-2 mt-2">
+                            <input id="question_to_mcs" type="text" placeholder="What is your Question?" class="border-2 px-3 mt-2 py-2 w-min">
+                            <div class="flex mt-4 w-full h-10">
+                                <button id="ask_mcs" class="w-full bg-blue-500 text-white px-3 py-0 rounded-lg font-semibold">Ask the all-knowing shell!</button> 
                             </div>
-                            <div>
-                                <h2>What the Shell thinks:</h2>
-                                <ul id="answer_log"> 
-                                </ul>
-                            </div>
+                            <p id="empty_question" class="mt-2 italic text-red-700 text-semibold"></p>
+                            
+                            <div class="grid grid-cols-2 mt-4">
+                                <div>
+                                    <h2 class="font-semibold text-xl">What bothers you:</h2>
+                                    <ul id="question_log">
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h2 class="font-semibold text-xl">What the Shell thinks:</h2>
+                                    <ul id="answer_log"> 
+                                    </ul>
+                                </div>
+                            </div>   
                         </div>
-
-                        
-                        <script src="magicconchshell.js">
-                        </script>
                     </div>
+                    
                 </div>
+                <script src="magicconchshell.js"></script>
             </div>
             <!-- NUMBER GUESSER further as NG-->
             <div id="numberguesser" class="w-full h-3/4">
