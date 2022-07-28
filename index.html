@@ -30,27 +30,28 @@
             </div>
 
             <!-- ROCK PAPER SCISSORS further as RPS   -->
-            <div id="rockpaperscissors" class="w-full h-3/4">
-                <div class="w-full h-full grid bg-center bg-contain bg-no-repeat place-items-center" style="background-image: url(/assets/rps_background.png)">
-                    <h3 class="text-3xl font-semibold text-gray-900 mt-8">Rock, Paper, or Scissors</h3>
-                    <div class="mt-4">
-                        <input id="name_rps" type="text" placeholder="Enter name (optional)" class="border-2 px-3 py-2 mt-2">
-                        <input id="choice_rps" type="text" placeholder="Rock, Paper or Scissors?" class="border-2 px-3 mt-2 py-2 w-min">
-                        <div class="flex mt-2">
-                            <button id="play_rps" class="bg-blue-500 text-white ml-6 px-3 py-0 rounded-lg font-semibold">Play!</button> 
-                            <p id="greeting" type="text" class="px-3 py-2"></p>
+            <div id="rockpaperscissors" class="w-full min-h-1/2">
+                <div class="w-full min-h-screen grid place-items-center items-start bg-center bg-contain bg-no-repeat" style="background-image: url(/assets/rps_background.png)">
+                    <h3 class="h-fit border-2 w-full text-3xl font-semibold text-gray-900 mt-8 text-center">Rock, Paper, or Scissors</h3>
+                    <div class="grid items-start place-items-center">
+                        <div>
+                            <input id="name_rps" type="text" placeholder="Enter name (optional)" class="border-2 px-3 py-2 mt-2">
+                            <input id="choice_rps" type="text" placeholder="Rock, Paper or Scissors?" class="border-2 px-3 mt-2 py-2 w-52">
+                            <button id="play_rps" class="bg-blue-500 text-white font-semibold ml-4 px-4 py-2 rounded-lg font-semibold">Play!</button>
                         </div>
+                        <p id="greeting" type="text" class="font-semibold px-3 py-2"></p>
                         
-                        <div class="grid grid-cols-2">
+                        <div class="grid grid-cols-2 place-items-center items-start w-full border-gray-600 rounded-lg border-2">
                             <div>
-                                <h2>Game Log:</h2>
+                                <h2 class="font-xl font-semibold">Game Log:</h2>
                                 <ul id="result_rps">
                                     
                                 </ul>
                             </div>
 
-                            <div class="" id="count_rps">
+                            <div class="font-xl font-semibold" id="count_rps">
                                 <h2>Scoreboard</h2>
+                                
                                 Games:<p id="games_rps">0</p>
                                 Wins:<p id="player_wins_rps">0</p>
                                 Losses:<p id="computer_wins_rps">0</p>
