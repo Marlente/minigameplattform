@@ -4,7 +4,6 @@ let computer_score = 0
 
 
 let number_guessing = document.getElementById("submit_guess");
-let next_round = document.getElementById("next_round_ng");
 
 
 // funtion when pressing make guess button
@@ -20,13 +19,6 @@ number_guessing.addEventListener("click", function(){
     document.getElementById("computer_score_ng").innerHTML = computer_score;
     document.getElementById("player_score_ng").innerHTML = player_score;
 
-})
-
-// funtion when pressing next round button
-next_round.addEventListener("click", function(){
-    document.getElementById("target_number_ng").innerHTML = "";
-    document.getElementById("winner_ng").innerHTML = "";
-    document.getElementById("computer_guess").innerHTML = "?";
     document.getElementById("round_number_ng").innerHTML = round_number_ng.toString();
 
 })

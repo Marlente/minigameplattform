@@ -13,7 +13,7 @@
                 <img class="object-cover h-40 pt-2" src="/assets/minigames.png" alt="Games Icon">
                 <h1 class="pl-12 font-bold text-5xl">Mini Game Plattform</h1>
             </div>
-            <nav class="font-semibold text-gray-700 mt-4 border-t-2 border-b-2 border-gray-300">                       
+            <nav class="font-semibold text-xl text-gray-700 mt-4 border-t-2 border-b-2 border-gray-300">                       
                 <ul class="justify-around items-center font-bold sm:grid sm:grid-cols-3 text-center">
                     <li id="select_ng" class="px-20">Number Guesser</li>
                     <li id="select_mcs" class="px-20">Magic Conch Shell</li>
@@ -99,44 +99,44 @@
                 <script src="magicconchshell.js"></script>
             </div>
             <!-- NUMBER GUESSER further as NG-->
-            <div id="numberguesser" class="w-full h-3/4">
-                <div class="w-full h-full place-items-center grid bg-center bg-contain bg-no-repeat place-items-center" style="background-image: url(/assets/numberguesser_background.png)">
-                    <h3 class="text-3xl font-semibold text-gray-900 mt-8">Number Guesser</h3>
+            <div id="numberguesser" class="w-full min-h-screen">
+                <div class="w-full h-full place-items-center grid place-items-center">
+                    <h3 class="h-fit border-2 w-full text-3xl font-semibold text-gray-900 mt-8 text-center">Number Guesser</h3>
 
-                    <div class="flex">
-                        <p>Round </p>
-                        <p id="round_number_ng">0</p>
+                    <div class="flex text-2xl">
+                        <p class="">Round </p>
+                        <p class="pl-2" id="round_number_ng">0</p>
                     </div>
-                    <div class="flex">
-                        <p>Target Number</p>
-                        <p id="target_number_ng"></p>
+                    <div class="flex font-semibold text-xl">
+                        <p>Target Number: </p>
+                        <p class="pl-2" id="target_number_ng">?</p>
                     </div>
 
                     <div class="grid grid-cols-2">
-                        <div>
-                            <h2>Computer</h2>
+                        <div class="border-gray-600 border-2 rounded-lg p-4 m-4 bg-center bg-contain bg-no-repeat" style="background-image: url(/assets/numberguesser_background.png)">
+                            <h2 class="text-semibold text-xl">Computer</h2>
                             <div class="flex">
                                 <p>Score:</p>
-                                <p id="computer_score_ng"></p>
+                                <p class="pl-3" id="computer_score_ng"></p>
                             </div> 
-                            <p id="computer_guess"></p>
+                            <div class="flex">
+                                <p>Guess:</p>
+                                <p class="pl-3" id="computer_guess"></p>
+                            </div>
                         </div>
-                        <div>
-                            <h2>You</h2>
+                        <div class="border-gray-600 border-2 rounded-lg p-4 m-4">
+                            <h2 class="text-semibold text-xl">You</h2>
                             <div class="flex">
                                 <p>Score:</p>
-                                <p id="player_score_ng"></p>
+                                <p class="pl-3" id="player_score_ng"></p>
                             </div>    
                             <div>
                                 <input type="number" id="player_guess_ng" placeholder="?">
                             </div>
-                            <button id="submit_guess">Make Your Guess!</button>
+                            <button id="submit_guess" class="mt-4 bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg font-semibold">Make Your Guess!</button>
                         </div>
                     </div>
-                    <h1 id="winner_ng"></h1>
-                    <div>
-                        <button id="next_round_ng">Next Round</button>
-                    </div>
+                    <h1 id="winner_ng">...and the winner is</h1>
 
                     <script src="/numberguesser.js"></script>
                 </div>
