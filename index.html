@@ -8,122 +8,135 @@
     </head>
 
     <body class="font-nunito bg-slate-100">
-        <header class="border-b-2">
-            <img class="object-cover h-40 pt-2" src="/assets/minigames.png" alt="Games Icon">
-            <nav class="font-semibold text-gray-700">                       
-                <ul class="justify-around items-center pt-1 font-bold sm:grid sm:grid-cols-3 text-center">
+        <header class="">
+            <div class="flex items-center">
+                <img class="object-cover h-40 pt-2" src="/assets/minigames.png" alt="Games Icon">
+                <h1 class="pl-12 font-bold text-5xl">Mini Game Plattform</h1>
+            </div>
+            <nav class="font-semibold text-gray-700 mt-4 border-t-2 border-b-2 border-gray-300">                       
+                <ul class="justify-around items-center font-bold sm:grid sm:grid-cols-3 text-center">
                     <li id="select_ng" class="px-20">Number Guesser</li>
-                    <li id="select_mcs" class="px-20 h-full align-middle">Magic Conch Shell</li>
-                    <li id="select_rps" class="bg-blue-200 px-20">Rock, Paper, Scissors</li>
+                    <li id="select_mcs" class="px-20">Magic Conch Shell</li>
+                    <li id="select_rps" class="px-20">Rock, Paper, Scissors</li>
                 </ul>
-            </nav>  
-            <script src="/hideandtoggle.js"></script>  
+            </nav> 
         </header>
 
         <main class="px-6 pt-4 grid place-items-center">
+            <!-- DEFAULT WHERE NO GAME IS SELECTED -->  
+            <div id="default" class="flex items-center pt-12">
+                <h1 class="font-bold font-4xl">Select a game first</h1>
+                <img class="object-cover h-60 pt-2" src="/assets/arrow_top.png" alt="Arrow top">                
+            </div>
+
             <!-- ROCK PAPER SCISSORS further as RPS   -->
-            <div id="rockpaperscissors" class="w-full min-h-screen place-items-center grid bg-center bg-contain bg-no-repeat place-items-center" style="background-image: url(/assets/rps_background.png)">
-                <h3 class="text-3xl font-semibold text-gray-900 mt-8">Rock, Paper, or Scissors</h3>
-                <div class="mt-4">
-                    <input id="name_rps" type="text" placeholder="Enter name (optional)" class="border-2 px-3 py-2 mt-2">
-                    <input id="choice_rps" type="text" placeholder="Rock, Paper or Scissors?" class="border-2 px-3 mt-2 py-2 w-min">
-                    <div class="flex mt-2">
-                        <button id="play_rps" class="bg-blue-500 text-white ml-6 px-3 py-0 rounded-lg font-semibold">Play!</button> 
-                        <p id="greeting" type="text" class="px-3 py-2"></p>
-                    </div>
-                    
-                    <div class="grid grid-cols-2">
-                        <div>
-                            <h2>Game Log:</h2>
-                            <ul id="result_rps">
-                                
-                            </ul>
+            <div id="rockpaperscissors" class="w-full h-3/4">
+                <div class="w-full h-full grid bg-center bg-contain bg-no-repeat place-items-center" style="background-image: url(/assets/rps_background.png)">
+                    <h3 class="text-3xl font-semibold text-gray-900 mt-8">Rock, Paper, or Scissors</h3>
+                    <div class="mt-4">
+                        <input id="name_rps" type="text" placeholder="Enter name (optional)" class="border-2 px-3 py-2 mt-2">
+                        <input id="choice_rps" type="text" placeholder="Rock, Paper or Scissors?" class="border-2 px-3 mt-2 py-2 w-min">
+                        <div class="flex mt-2">
+                            <button id="play_rps" class="bg-blue-500 text-white ml-6 px-3 py-0 rounded-lg font-semibold">Play!</button> 
+                            <p id="greeting" type="text" class="px-3 py-2"></p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2">
+                            <div>
+                                <h2>Game Log:</h2>
+                                <ul id="result_rps">
+                                    
+                                </ul>
+                            </div>
+
+                            <div class="" id="count_rps">
+                                <h2>Scoreboard</h2>
+                                Games:<p id="games_rps">0</p>
+                                Wins:<p id="player_wins_rps">0</p>
+                                Losses:<p id="computer_wins_rps">0</p>
+                            </div>
                         </div>
 
-                        <div class="" id="count_rps">
-                            <h2>Scoreboard</h2>
-                            Games:<p id="games_rps">0</p>
-                            Wins:<p id="player_wins_rps">0</p>
-                            Losses:<p id="computer_wins_rps">0</p>
-                        </div>
+                        
+                        <script src="rockpaperscissors.js">
+                        </script>
                     </div>
-
-                    
-                    <script src="rockpaperscissors.js">
-                    </script>
                 </div>
             </div>
 
             <!-- Magic Conch Shell further as MCS  -->
-            <div id="magicconchshell" class="w-full min-h-screen place-items-center grid bg-center bg-contain bg-no-repeat place-items-center" style="background-image: url(/assets/conchshell_background.png)">
-                <h3 class="text-3xl font-semibold text-gray-900 mt-8">The Magic Conch Shell</h3>
-                <div class="mt-4">
-                    <input id="name_mcs" type="text" placeholder="Enter name (optional)" class="border-2 px-3 py-2 mt-2">
-                    <input id="question_to_mcs" type="text" placeholder="What is your Question?" class="border-2 px-3 mt-2 py-2 w-min">
-                    <div class="flex mt-2">
-                        <button id="ask_mcs" class="bg-blue-500 text-white ml-6 px-3 py-0 rounded-lg font-semibold">Ask the all-knowing shell!</button> 
-                        <p id="empty_question"></p>
-                    </div>
-                    
-                    <div class="grid grid-cols-2">
-                        <div>
-                            <h2>Questions:</h2>
-                            <ul id="question_log">
-                            </ul>
+            <div id="magicconchshell" class="w-full h-3/4">
+                <div class="w-full h-full place-items-center grid bg-center bg-contain bg-no-repeat place-items-center" style="background-image: url(/assets/conchshell_background.png)">
+                    <h3 class="text-3xl font-semibold text-gray-900 mt-8">The Magic Conch Shell</h3>
+                    <div class="mt-4">
+                        <input id="name_mcs" type="text" placeholder="Enter name (optional)" class="border-2 px-3 py-2 mt-2">
+                        <input id="question_to_mcs" type="text" placeholder="What is your Question?" class="border-2 px-3 mt-2 py-2 w-min">
+                        <div class="flex mt-2">
+                            <button id="ask_mcs" class="bg-blue-500 text-white ml-6 px-3 py-0 rounded-lg font-semibold">Ask the all-knowing shell!</button> 
+                            <p id="empty_question"></p>
                         </div>
-                        <div>
-                            <h2>What the Shell thinks:</h2>
-                            <ul id="answer_log"> 
-                            </ul>
+                        
+                        <div class="grid grid-cols-2">
+                            <div>
+                                <h2>Questions:</h2>
+                                <ul id="question_log">
+                                </ul>
+                            </div>
+                            <div>
+                                <h2>What the Shell thinks:</h2>
+                                <ul id="answer_log"> 
+                                </ul>
+                            </div>
                         </div>
-                    </div>
 
-                    
-                    <script src="magicconchshell.js">
-                    </script>
+                        
+                        <script src="magicconchshell.js">
+                        </script>
+                    </div>
                 </div>
             </div>
-
             <!-- NUMBER GUESSER further as NG-->
-            <div id="numberguesser" class="w-full min-h-screen place-items-center grid bg-center bg-contain bg-no-repeat place-items-center" style="background-image: url(/assets/numberguesser_background.png)">
-                <h3 class="text-3xl font-semibold text-gray-900 mt-8">Number Guesser</h3>
+            <div id="numberguesser" class="w-full h-3/4">
+                <div class="w-full h-full place-items-center grid bg-center bg-contain bg-no-repeat place-items-center" style="background-image: url(/assets/numberguesser_background.png)">
+                    <h3 class="text-3xl font-semibold text-gray-900 mt-8">Number Guesser</h3>
 
-                <div class="flex">
-                    <p>Round </p>
-                    <p id="round_number_ng">0</p>
-                </div>
-                <div class="flex">
-                    <p>Target Number</p>
-                    <p id="target_number_ng"></p>
-                </div>
-
-                <div class="grid grid-cols-2">
-                    <div>
-                        <h2>Computer</h2>
-                        <div class="flex">
-                            <p>Score:</p>
-                            <p id="computer_score_ng"></p>
-                        </div> 
-                        <p id="computer_guess"></p>
+                    <div class="flex">
+                        <p>Round </p>
+                        <p id="round_number_ng">0</p>
                     </div>
-                    <div>
-                        <h2>You</h2>
-                        <div class="flex">
-                            <p>Score:</p>
-                            <p id="player_score_ng"></p>
-                        </div>    
+                    <div class="flex">
+                        <p>Target Number</p>
+                        <p id="target_number_ng"></p>
+                    </div>
+
+                    <div class="grid grid-cols-2">
                         <div>
-                            <input type="number" id="player_guess_ng" placeholder="?">
+                            <h2>Computer</h2>
+                            <div class="flex">
+                                <p>Score:</p>
+                                <p id="computer_score_ng"></p>
+                            </div> 
+                            <p id="computer_guess"></p>
                         </div>
-                        <button id="submit_guess">Make Your Guess!</button>
+                        <div>
+                            <h2>You</h2>
+                            <div class="flex">
+                                <p>Score:</p>
+                                <p id="player_score_ng"></p>
+                            </div>    
+                            <div>
+                                <input type="number" id="player_guess_ng" placeholder="?">
+                            </div>
+                            <button id="submit_guess">Make Your Guess!</button>
+                        </div>
                     </div>
-                </div>
-                <h1 id="winner_ng"></h1>
-                <div>
-                    <button id="next_round_ng">Next Round</button>
-                </div>
+                    <h1 id="winner_ng"></h1>
+                    <div>
+                        <button id="next_round_ng">Next Round</button>
+                    </div>
 
-                <script src="/numberguesser.js"></script>
+                    <script src="/numberguesser.js"></script>
+                </div>
             </div>
 
         </main>
@@ -150,5 +163,6 @@
 
         </footer>
 -->
+        <script src="/hideandtoggle.js"></script> 
     </body>
 </html>
